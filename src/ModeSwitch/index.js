@@ -1,6 +1,6 @@
 import { ImportantText } from "../ImportantText";
-import { Button, Image, SwitchIcon, Wraper } from "./styled";
-import brightness from "../images/brightness.png"
+import { Button, SwitchIcon, Wraper } from "./styled";
+import { ReactComponent as Brightness } from "../images/brightness.svg"
 
 
 const ModeSwitch = () => {
@@ -9,7 +9,7 @@ const ModeSwitch = () => {
             <ImportantText>DARK MODE OFF</ImportantText>
             <Button>
                 <SwitchIcon>
-                    <Image src={brightness}/>
+                    <Brightness/>
                 </SwitchIcon>
             </Button>
         </Wraper>

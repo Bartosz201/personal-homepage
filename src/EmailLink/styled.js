@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { theme } from "../theme";
+import { lightThem, theme } from "../theme";
 
 
 export const Link = styled.a`
     display: block;
     display: flex;
     align-items: center;
-    background-color: ${theme.color.scienceBlue};
+    background-color: ${lightThem.color.scienceBlue};
     margin-top: 32px;
     padding: 12px 16px 12px 16px;
     width: fit-content;
