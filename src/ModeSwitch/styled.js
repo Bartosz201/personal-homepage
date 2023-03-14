@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { lightThem } from "../theme";
-
+import { ReactComponent as Brightness } from "../images/brightness.svg"
 
 export const Wraper = styled.div`
     display: flex;
@@ -30,4 +30,8 @@ export const SwitchIcon = styled.div`
 
 export const Image = styled.img`
     width: 14px;
+`;
+
+export const StyledBrightness  = styled(Brightness)`
+    color: ${lightThem.color.white};
 `;

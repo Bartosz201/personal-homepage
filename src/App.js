@@ -1,5 +1,6 @@
 import Article from "./Article";
 import Header from "./Header";
+import Portfolio from "./Portfolio";
 
 
 function App() {
@@ -27,25 +28,8 @@ function App() {
         "Redux-Saga",
         "Teamwork"
       ]}
-      // "Semantic & accessible HTML",
-      //   "Markdown",
-      //   "CSS BEM",
-      //   "CSS FLexbox",
-      //   "CSS Grid",
-      //   "JavaScript ES6",
-      //   "Immutability",
-      //   "React",
-      //   "React Hooks",
-      //   "Styled-components",
-      //   "Redux (Toolkit)",
-      //   "Redux-Saga",
-      //   "React Router",
-      //   "Responsive Web Design",
-      //   "Git",
-      //   "Github",
-      //   "Trello",
-      //   "Teamwork"
     />
+    <Portfolio/>
   </>);
 };
 
