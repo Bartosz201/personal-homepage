@@ -1,6 +1,5 @@
-import styled from "styled-components";
-import { lightThem } from "../theme";
-
+import styled, { css } from "styled-components";
+import { darkTheme, lightThem } from "../theme";
 
 export const StyledHeader = styled.header`
     margin-top: 119px;
@@ -24,6 +23,10 @@ export const StyledH1 = styled.h1`
     letter-spacing: 0.05em;
     color: ${lightThem.color.mineShaft};
     margin-top: 12px;
+    transition: color 1s;
+    ${({themeIsDark}) => themeIsDark && css`
+    color: ${darkTheme.color.white};
+    `}
 `;
 
 export const Paragraph = styled.p`

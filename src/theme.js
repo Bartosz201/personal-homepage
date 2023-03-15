@@ -16,3 +16,13 @@ export const lightThem = {
         scienceBlue: "#0366D6",
     }
 };
+
+export const darkTheme = {
+    color: {
+        white: "#FFFFFF",
+        mineShaft: "#252525",
+        dodgerBlue: "#2188FF",
+        tundora: "#2C2C2C",
+        codGray: "#393939",
+    }
+}

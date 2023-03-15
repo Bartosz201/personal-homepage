@@ -1,10 +1,14 @@
-import styled from "styled-components";
-import { lightThem } from "../theme";
+import styled, { css } from "styled-components";
+import { darkTheme, lightThem } from "../theme";
 
 export const Wraper = styled.article`
     background-color: ${lightThem.color.white};
     box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02), 0px 16px 58px rgba(9, 10, 51, 0.03);
     margin-top: 63px;
+    transition: background 1s;
+        ${({themeIsDark}) => themeIsDark && css`
+            background-color: ${darkTheme.color.tundora};
+        `}
 `;
 
 export const Header = styled.h2`
@@ -14,6 +18,11 @@ export const Header = styled.h2`
     padding: 32px 32px 15px 32px;
     border-bottom: 2px solid ${lightThem.color.athensGray};
     margin: 0;
+    transition: 1s;
+        ${({themeIsDark}) => themeIsDark && css`
+            color: ${darkTheme.color.white};
+            border-bottom: 2px solid ${darkTheme.color.codGray};
+        `}
 `;
 
 export const List = styled.ul`
@@ -37,5 +46,8 @@ export const ListItem = styled.li`
         display: block;
         margin-right: 16px;
         border-radius: 50%;
+            ${({themeIsDark}) => themeIsDark && css`
+            background-color: ${darkTheme.color.dodgerBlue};
+            `}
     }
 `;

@@ -1,36 +1,15 @@
-import Article from "./Article";
-import Header from "./Header";
-import Portfolio from "./Portfolio";
+import { useSelector } from "react-redux";
+import GlobalStyle from "./globalStyles";
+import PersonalHomepage from "./PersonalHomepage";
+import { selectDarkTheme } from "./themeSlice";
 
-
-function App() {
-  return (<>
-    <Header />
-    <Article
-      title={"My skillset includes 🛠️"}
-      listItems={[
-        "Semantic & accessible HTML",
-        "Immutability",
-        "React Router",
-        "Markdown",
-        "React",
-        "Responsive Web Design",
-        "CSS BEM",
-        "React Hooks",
-        "Git",
-        "CSS FLexbox",
-        "Styled-components",
-        "Github",
-        "CSS Grid",
-        "Redux (Toolkit)",
-        "Trello",
-        "JavaScript ES6", 
-        "Redux-Saga",
-        "Teamwork"
-      ]}
-    />
-    <Portfolio/>
-  </>);
+const App = () => {
+    const themeIsDark = useSelector(selectDarkTheme)
+    return (<>
+        <GlobalStyle themeIsDark={themeIsDark} />
+        <PersonalHomepage />
+    </>
+    );
 };
 
 export default App;

@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import { lightThem } from "./theme";
+import { createGlobalStyle, css } from "styled-components";
+import { darkTheme, lightThem } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
     body{
@@ -8,6 +8,12 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Inter', sans-serif;
         background-color: ${lightThem.color.whiteLilac} ;
         color: ${lightThem.color.slateGray};
+        transition: color 1s;
+        transition: background 1s;
+            ${({ themeIsDark }) => themeIsDark && css`
+            background-color: ${darkTheme.color.mineShaft};
+            color: ${darkTheme.color.white};
+            `}
     }
 `;
 

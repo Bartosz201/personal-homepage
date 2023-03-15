@@ -1,14 +1,22 @@
-
-import { Header, List, ListItem, Wraper } from "./styled"
-
+import { useSelector } from "react-redux";
+import { selectDarkTheme } from "../themeSlice";
+import { Header, List, ListItem, Wraper } from "./styled";
 
 const Article = ({ title, listItems }) => {
+    const themeIsDark = useSelector(selectDarkTheme);
+    
     return (
-        <Wraper>
-            <Header>{title}</Header>
+        <Wraper themeIsDark={themeIsDark}>
+            <Header themeIsDark={themeIsDark}>
+                {title}
+            </Header>
             <List>
                 {listItems.map(content => (
-                    <ListItem key={content}>{content}</ListItem>
+                    <ListItem
+                        themeIsDark={themeIsDark}
+                        key={content}>
+                        {content}
+                    </ListItem>
                 ))}
             </List>
         </Wraper>

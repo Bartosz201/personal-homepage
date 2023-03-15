@@ -1,6 +1,5 @@
-import styled from "styled-components";
-import { lightThem, theme } from "../theme";
-
+import styled, { css } from "styled-components";
+import { darkTheme, lightThem, theme } from "../theme";
 
 export const Link = styled.a`
     display: block;
@@ -13,9 +12,12 @@ export const Link = styled.a`
     text-decoration: none;
     border-radius: 4px;
     transition: 1s;
-    &:hover{
+        ${({themeIsDark})=> themeIsDark && css`
+        background-color: ${darkTheme.color.dodgerBlue};
+        `}
+        &:hover{
         transform: scale(1.1);
-    };
+        };
 `;
 
 export const LinkText = styled.div`
