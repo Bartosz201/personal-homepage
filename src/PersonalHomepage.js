@@ -23,12 +23,20 @@ function PersonalHomepage() {
         "CSS Grid",
         "Redux (Toolkit)",
         "Trello",
-        "JavaScript ES6", 
+        "JavaScript ES6",
         "Redux-Saga",
         "Teamwork"
       ]}
     />
-    <Portfolio/>
+    <Article
+      title={"What I want to learn next 🚀"}
+      listItems={[
+        "Node.js",
+        "JS classes",
+        "Unit testing",
+      ]}
+    />
+    <Portfolio />
   </>);
 };
 

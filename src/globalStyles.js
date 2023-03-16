@@ -4,6 +4,7 @@ import { darkTheme, lightThem } from "./theme";
 const GlobalStyle = createGlobalStyle`
     body{
         max-width: 1216px;
+        letter-spacing: 0.05em;
         margin: auto;
         font-family: 'Inter', sans-serif;
         background-color: ${lightThem.color.whiteLilac} ;
@@ -13,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
             ${({ themeIsDark }) => themeIsDark && css`
             background-color: ${darkTheme.color.mineShaft};
             color: ${darkTheme.color.white};
-            `}
+            `};
     }
 `;
 

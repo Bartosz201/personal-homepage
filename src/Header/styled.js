@@ -20,11 +20,10 @@ export const StyledH1 = styled.h1`
     font-size: 38px;
     font-weight: 900;
     font-style: normal;
-    letter-spacing: 0.05em;
     color: ${lightThem.color.mineShaft};
     margin-top: 12px;
     transition: color 1s;
-    ${({themeIsDark}) => themeIsDark && css`
+    ${({ themeIsDark }) => themeIsDark && css`
     color: ${darkTheme.color.white};
     `}
 `;

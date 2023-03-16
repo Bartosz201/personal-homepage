@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { darkTheme, lightThem } from "../theme";
-import { ReactComponent as Brightness } from "../images/brightness.svg"
+import { ReactComponent as Brightness } from "../images/brightness.svg";
 
 export const Wraper = styled.div`
     display: flex;
@@ -17,7 +17,7 @@ export const Button = styled.button`
     border-radius: 14px;
     padding: 2px;
     transition: 1s;
-        ${({themeIsDark}) => themeIsDark && css`
+        ${({ themeIsDark }) => themeIsDark && css`
         background-color: ${darkTheme.color.tundora};
         `}
 `;
@@ -31,7 +31,7 @@ export const SwitchIcon = styled.div`
     align-items: center;
     justify-content: center;
     transition: 1s;
-        ${({themeIsDark}) => themeIsDark && css`
+        ${({ themeIsDark }) => themeIsDark && css`
         background-color: ${darkTheme.color.white};
         transform: translateX(22px);
         `}
@@ -41,10 +41,10 @@ export const Image = styled.img`
     width: 14px;
 `;
 
-export const StyledBrightness  = styled(Brightness)`
+export const StyledBrightness = styled(Brightness)`
     color: ${lightThem.color.white};
     transition: 1s;
-        ${({themeIsDark}) => themeIsDark && css`
-        color: black;    
-        `}
+        ${({ themeIsDark }) => themeIsDark && css`
+        color: ${darkTheme.color.mineShaft};    
+        `};
 `;
