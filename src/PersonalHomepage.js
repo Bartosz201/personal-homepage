@@ -1,4 +1,5 @@
 import Article from "./Article";
+import Footer from "./Footer";
 import Header from "./Header";
 import Portfolio from "./Portfolio";
 
@@ -37,6 +38,7 @@ function PersonalHomepage() {
       ]}
     />
     <Portfolio />
+    <Footer />
   </>);
 };
 
