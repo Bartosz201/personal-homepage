@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { darkTheme, lightThem } from "../theme";
+import { darkTheme, lightThem, theme } from "../theme";
 
 export const List = styled.ul`
     padding: 0px;
@@ -8,6 +8,10 @@ export const List = styled.ul`
     grid-gap: 32px;
     list-style: none;
     margin-top: 24px;
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        grid-template-columns: 1fr;
+        grid-gap: 16px;
+    }
 `;
 
 export const ListItem = styled.li`
@@ -22,6 +26,9 @@ export const ListItem = styled.li`
     ${({ themeIsDark }) => themeIsDark && css`
         background-color: ${darkTheme.color.tundora};
     `};
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        padding: 24px;
+    }
 `;
 
 export const Header = styled.h3`
@@ -31,11 +38,17 @@ export const Header = styled.h3`
     ${({ themeIsDark }) => themeIsDark && css`
         color: ${darkTheme.color.white};
     `};
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        font-size: 16px;
+    }
 `;
 
 export const Description = styled.p`
     font-size: 18px;
     line-height: 1.4;
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        font-size: 14px;
+    }
 `;
 
 export const LinkWraper = styled.div`
@@ -43,6 +56,9 @@ export const LinkWraper = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: 8px;
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        font-size: 14px;
+    }
 `;
 
 export const Link = styled.a`

@@ -1,10 +1,13 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as GithubIcon } from "../images/githubIcon.svg";
-import { darkTheme, lightThem } from "../theme";
+import { darkTheme, lightThem, theme } from "../theme";
 
 export const Wraper = styled.section`
     margin-top: 72px;
     text-align: center;
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        margin-top: 48px;
+    };
 `;
 
 export const StyledIcon = styled(GithubIcon)`
@@ -13,6 +16,9 @@ export const StyledIcon = styled(GithubIcon)`
     ${({ themeIsDark }) => themeIsDark && css`
         color: ${darkTheme.color.dodgerBlue};
     `};
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        width: 32px;
+    }
 `;
 
 export const Header = styled.h2`
@@ -24,9 +30,16 @@ export const Header = styled.h2`
         ${({ themeIsDark }) => themeIsDark && css`
             color: ${darkTheme.color.white};
         `};
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        font-size: 18px;
+        margin: 13px 0px 16px 0px;
+    }
 `;
 
 export const SubHeader = styled.span`
     font-size: 20px;
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        font-size: 17px;
+    }
 `;
 

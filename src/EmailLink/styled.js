@@ -18,6 +18,9 @@ export const Link = styled.a`
         &:hover{
         transform: scale(1.1);
         };
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        margin-top: 24px;
+    }
 `;
 
 export const LinkText = styled.div`
@@ -25,8 +28,14 @@ export const LinkText = styled.div`
     font-size: 20px;
     font-weight: 600;
     margin-left: 13px;
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        font-size: 18px;
+    }
 `;
 
 export const Image = styled.img`
     width: 24px;
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        width: 17px;
+    }
 `;

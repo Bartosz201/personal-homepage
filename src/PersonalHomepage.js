@@ -1,10 +1,12 @@
 import Article from "./Article";
 import Footer from "./Footer";
 import Header from "./Header";
+import ModeSwitch from "./ModeSwitch";
 import Portfolio from "./Portfolio";
 
 function PersonalHomepage() {
   return (<>
+    <ModeSwitch />
     <Header />
     <Article
       title={"My skillset includes 🛠️"}

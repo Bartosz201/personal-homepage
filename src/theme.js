@@ -2,6 +2,9 @@ export const theme = {
     color: {
         white: "#FFFFFF",
     },
+    breakPoint: {
+        mobile: 767,
+    },
 };
 
 export const lightThem = {

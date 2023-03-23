@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
-import { darkTheme, lightThem } from "../theme";
+import { darkTheme, lightThem, theme } from "../theme";
 import { ReactComponent as Brightness } from "../images/brightness.svg";
 
 export const Wraper = styled.div`
     display: flex;
     justify-content: end;
     align-items: center;
-    margin-bottom: 43px;
+    margin-bottom: 0px;
 `;
 
 export const Button = styled.button`
@@ -47,4 +47,14 @@ export const StyledBrightness = styled(Brightness)`
         ${({ themeIsDark }) => themeIsDark && css`
         color: ${darkTheme.color.mineShaft};    
         `};
+`;
+
+export const Text = styled.span`
+    font-weight: 700;
+    font-size: 12px;
+    margin-right: 12px;
+    text-transform: uppercase;
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        display: none;
+    }
 `;
