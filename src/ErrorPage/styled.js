@@ -5,6 +5,9 @@ import { darkTheme, lightThem, theme } from "../theme";
 export const Wraper = styled.div`
 margin-top: 88px;
 text-align: center;
+@media (max-width: ${theme.breakPoint.mobile}px) {
+        margin-top: 50px;
+    }
 `;
 
 export const StyledDanger = styled(Danger)`
@@ -23,11 +26,18 @@ export const Header = styled.h3`
     ${({ themeIsDark }) => themeIsDark && css`
         color: ${darkTheme.color.white};
     `};
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        font-size: 18px;
+        margin-top: 18px;
+    }
 `;
 
 export const Information = styled.p`
     font-size: 20px;
     line-height: 1.4;
+    @media (max-width: ${theme.breakPoint.mobile}px) {
+        font-size: 17px;
+    }
 `;
 
 export const Link = styled.a`

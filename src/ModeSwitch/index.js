@@ -8,7 +8,7 @@ const ModeSwitch = () => {
 
     return (
         <Wraper>
-            <Text>DARK MODE OFF</Text>
+            <Text>DARK MODE {themeIsDark ? "ON": "OFF"}</Text>
             <Button
                 themeIsDark={themeIsDark}
                 onClick={() => dispatch(toggleTheme())}>
