@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { darkTheme, lightThem, theme } from "../../../core/App/theme";
 import { ReactComponent as GithubIcon } from "../images/githubIcon.svg";
+import { ReactComponent as LinkedINIcon } from "../images/linkedINIcon.svg";
 
 export const StyledFooter = styled.footer`
     margin: 120px 0px 110px 0px;
@@ -53,6 +54,7 @@ export const SocialMedia = styled.div`
 
 export const Link = styled.a`
     color: ${lightThem.color.mineShaft};
+    margin-right: 24px;
     ${({ themeIsDark }) => themeIsDark && css`
         color: ${darkTheme.color.white};
     `};
@@ -65,6 +67,11 @@ export const Link = styled.a`
 `;
 
 export const StyledGithubIcon = styled(GithubIcon)`
+  @media (max-width: ${theme.breakPoint.mobile}px) {
+        width: 32px;
+    };
+`;
+export const StyledLinkedINIcon = styled(LinkedINIcon)`
   @media (max-width: ${theme.breakPoint.mobile}px) {
         width: 32px;
     };
