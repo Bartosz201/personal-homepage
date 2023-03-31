@@ -1,6 +1,23 @@
 # Personal homepage
 
+## Description 
+This is webside about me. In this webside you can find my portfolio and links to my social media.
 
+## Demo
+https://bartosz201.github.io/personal-homepage/
+
+## Used Technologies
+
+- HTML
+- CSS
+- JavaScript 
+- Grid
+- Open graph
+- React
+- Redux 
+- Redux Saga
+- Styled-components
+- Axios
 
 ## Available Scripts
 
